@@ -18,22 +18,22 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <p class="text-sm text-gray-600">Username</p>
-              <p class="text-lg font-medium text-gray-800">{{ username }}</p>
+              <p class="text-lg font-medium text-gray-800">{{ user.username }}</p>
             </div>
             <div>
               <p class="text-sm text-gray-600">Email Address</p>
-              <p class="text-lg font-medium text-gray-800">{{ email }}</p>
+              <p class="text-lg font-medium text-gray-800">{{ user.email }}</p>
             </div>
             <div>
               <p class="text-sm text-gray-600">Full Name</p>
               <p class="text-lg font-medium text-gray-800">
-                {{ username }} {{ last_name }}
+                {{ user.username}}
               </p>
             </div>
             <div>
               <p class="text-sm text-gray-600">Member Since</p>
               <p class="text-lg font-medium text-gray-800">
-                {{ date_joined|date:"F j, Y" }}
+                {{ user.date_joined|date:"F j, Y" }}
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest
 from django.shortcuts import render
+from .models import Usuarios
 
 
 # Create your views here.
@@ -12,10 +13,5 @@ def contact(request: HttpRequest):
 
 
 def about(request: HttpRequest):
-    context = {
-        "username": "Renan",
-        "email": "Renan@example.com",
-        "last_name": "Rodrigues",
-        "date_joined": "2021-10-10",
-    }
-    return render(request, "accounts/accounts.html", context)
+    user = Usuarios.objects.first()
+    return render(request, "accounts/accounts.html", {"user": user})
